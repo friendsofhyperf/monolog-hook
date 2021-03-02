@@ -4,8 +4,8 @@ declare(strict_types=1);
 /**
  * This file is part of monolog-hook.
  *
- * @link     https://github.com/huangdijia/monolog-hook
- * @document https://github.com/huangdijia/monolog-hook/blob/main/README.md
+ * @link     https://github.com/friendsofhyperf/monolog-hook
+ * @document https://github.com/friendsofhyperf/monolog-hook/blob/main/README.md
  * @contact  huangdijia@gmail.com
  */
 namespace FriendsOfHyperf\MonologHook;
@@ -23,9 +23,9 @@ class ConfigProvider
                     'paths' => [
                         __DIR__,
                     ],
-                ],
-                'class_map' => [
-                    Monolog\Handler\SyslogUdp\UdpSocket::class => __DIR__ . '/../classmap/Monolog/Handler/SyslogUdp/UdpSocket.php',
+                    'class_map' => [
+                        Monolog\Handler\SyslogUdp\UdpSocket::class => __DIR__ . '/../classmap/Monolog/Handler/SyslogUdp/UdpSocket.php',
+                    ],
                 ],
             ],
             'commands' => [],
