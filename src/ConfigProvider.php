@@ -24,7 +24,7 @@ class ConfigProvider
                         __DIR__,
                     ],
                     'class_map' => [
-                        Monolog\Handler\SyslogUdp\UdpSocket::class => __DIR__ . '/../classmap/Monolog/Handler/SyslogUdp/UdpSocket.php',
+                        \Monolog\Handler\SyslogUdp\UdpSocket::class => __DIR__ . '/../classmap/Monolog/Handler/SyslogUdp/UdpSocket.php',
                     ],
                 ],
             ],
