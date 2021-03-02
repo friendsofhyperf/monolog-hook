@@ -9,7 +9,7 @@ Hyperf HOOK for Monolog, fix SyslogUdpHandler.
 ## Requirement
 
 - PHP 7.4.*
-- Swoole >= 4.6
+- Swoole >= 4.4
 
 ## Installation
 

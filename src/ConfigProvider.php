@@ -16,6 +16,12 @@ class ConfigProvider
     {
         defined('BASE_PATH') or define('BASE_PATH', '');
 
+        $classMap = [];
+
+        if (version_compare(swoole_version(), '4.6', '>=')) {
+            $classMap[\Monolog\Handler\SyslogUdp\UdpSocket::class] = __DIR__ . '/../classmap/Monolog/Handler/SyslogUdp/UdpSocket.php';
+        }
+
         return [
             'dependencies' => [],
             'annotations' => [
@@ -23,9 +29,7 @@ class ConfigProvider
                     'paths' => [
                         __DIR__,
                     ],
-                    'class_map' => [
-                        \Monolog\Handler\SyslogUdp\UdpSocket::class => __DIR__ . '/../classmap/Monolog/Handler/SyslogUdp/UdpSocket.php',
-                    ],
+                    'class_map' => $classMap,
                 ],
             ],
             'commands' => [],
