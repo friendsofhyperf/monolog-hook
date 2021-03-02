@@ -1,0 +1,36 @@
+{
+    "name": "friendsofhyperf/monolog-hook",
+    "description": "Hyperf HOOK for Monolog, fix SyslogUdpHandler.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Huangdijia",
+        "email": "huangdijia@gmail.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "FriendsOfHyperf\\MonologHook\\": "src/"
+        }
+    },
+    "require": {
+        "php": "7.4.*",
+        "ext-swoole": ">=4.6"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "phpstan/phpstan": "^0.12",
+        "swoole/ide-helper": "dev-master"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "FriendsOfHyperf\\MonologHook\\ConfigProvider"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix $1",
+        "analyse": "phpstan analyse --memory-limit 300M -l 0 -c phpstan.neon ./src"
+    }
+}
