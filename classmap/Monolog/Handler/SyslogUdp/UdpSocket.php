@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 /**
- * This file is part of tw8591-im-service.
+ * This file is part of monolog-hook.
  *
- * @link     https://code.addcn.com/8591/services/im
- * @document https://code.addcn.com/8591/services/im/-/blob/master/README.md
- * @contact  hdj@addcn.com
+ * @link     https://github.com/friendsofhyperf/monolog-hook
+ * @document https://github.com/friendsofhyperf/monolog-hook/blob/main/README.md
+ * @contact  huangdijia@gmail.com
  */
 namespace Monolog\Handler\SyslogUdp;
 
