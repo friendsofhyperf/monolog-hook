@@ -18,7 +18,7 @@ class ConfigProvider
 
         $classMap = [];
 
-        if (version_compare(PHP_VERSION, '8.0', '<') && version_compare(swoole_version(), '4.6', '>=')) {
+        if (version_compare(swoole_version(), '4.6', '>=')) {
             $classMap[\Monolog\Handler\SyslogUdp\UdpSocket::class] = __DIR__ . '/../classmap/Monolog/Handler/SyslogUdp/UdpSocket.php';
         }
 
