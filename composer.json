@@ -24,6 +24,9 @@
         "swoole/ide-helper": "dev-master"
     },
     "extra": {
+        "branch-alias": {
+            "main": "1.0-dev"
+        },
         "hyperf": {
             "config": "FriendsOfHyperf\\MonologHook\\ConfigProvider"
         }
