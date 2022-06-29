@@ -79,14 +79,12 @@ class UdpSocket
     protected function send(string $chunk): void
     {
         if (Coroutine::inCoroutine()) {
-            co(function () use ($chunk) {
-                $socket = new Client(SWOOLE_SOCK_UDP);
-                $socket->connect($this->ip, $this->port, 0.5);
-                defer(function () use ($socket) {
-                    $socket->close();
-                });
-                $socket->send($chunk);
+            $socket = new Client(SWOOLE_SOCK_UDP);
+            $socket->connect($this->ip, $this->port, 0.5);
+            defer(function () use ($socket) {
+                $socket->close();
             });
+            $socket->send($chunk);
 
             return;
         }
