@@ -14,8 +14,6 @@ class ConfigProvider
 {
     public function __invoke(): array
     {
-        defined('BASE_PATH') or define('BASE_PATH', '');
-
         $classMap = [];
 
         if (version_compare(swoole_version(), '4.6', '>=')) {
@@ -23,18 +21,14 @@ class ConfigProvider
         }
 
         return [
-            'dependencies' => [],
             'annotations' => [
                 'scan' => [
-                    'paths' => [
-                        __DIR__,
-                    ],
+                    // 'paths' => [
+                    //     __DIR__,
+                    // ],
                     'class_map' => $classMap,
                 ],
             ],
-            'commands' => [],
-            'listeners' => [],
-            'publish' => [],
         ];
     }
 }
